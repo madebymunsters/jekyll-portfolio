@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header" style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
 	<div class="branding">
 		{% if site.theme.gravatar %}
 		<a href="{{ site.baseurl }}/">
@@ -26,4 +26,9 @@
 			{% endfor %}
 		</ul>
 	</nav>
+	{% if site.theme.header_text %}
+  <div class="call-out">
+    {{ site.theme.header_text }}
+  </div>
+  {% endif %}
 </header>
